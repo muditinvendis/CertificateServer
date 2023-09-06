@@ -170,9 +170,11 @@ document.getElementById('loginForm').addEventListener('submit', async function (
 
             const data = await response.json();
 
-            if (data.success) {
-                responseMessage.textContent = data.message;
-                // window.location.href = 'certificatePage.html';
+            if (response.ok) {
+                responseMessage.textContent = 'Sign in successful!';
+                setTimeout(function () {
+                    window.location.href = 'certificatePage.html';
+                }, 3000);
             } else {
                 responseMessage.textContent = 'Sign in failed. Please check your credentials.';
             }
