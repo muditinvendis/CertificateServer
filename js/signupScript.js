@@ -1,7 +1,10 @@
 document.getElementById('signupForm').addEventListener('submit', async function (event) {
   event.preventDefault();
+      // Disable the submit button to prevent multiple submissions
+  document.querySelector('button[type="submit"]').disabled = true;
   var isValid = validateForm();
   if (isValid) {
+    showLoadingScreen();
     var identifier = document.getElementById('indentifier').value.trim();
     var password = document.getElementById('password').value;
     var webTerms = document.getElementById('termsOfService').checked;
@@ -33,6 +36,10 @@ document.getElementById('signupForm').addEventListener('submit', async function 
       console.error('Error:', error);
       showResponseMessage('An error occurred. Please try again later.');
     }
+    finally {
+      hideLoadingScreen();
+      document.querySelector('button[type="submit"]').disabled = false;
+  }
   }
 });
 

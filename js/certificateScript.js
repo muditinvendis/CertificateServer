@@ -928,6 +928,10 @@ document.getElementById('certificate-form').addEventListener('submit', async fun
       document.body.removeChild(link);
 
       URL.revokeObjectURL(url);
+      setTimeout(() => {
+        window.location.href = 'successPage.html';
+      }, 3000);
+
     } catch (error) {
       console.error(error);
       alert('Failed to fetch certificate. Please try again.');

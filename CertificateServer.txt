@@ -14,7 +14,7 @@
 4. Server will start listening to the desired port number.
 
 5. when the server gets connected you can run the file through --> http://127.0.0.1:3013/signupPage.html
-   and if you want to go any page of your wish you just need to change after the (/certiifcatePage.html).
+   and if you want to go any page of your wish you just need to change after the (/certificatePage.html).
 
 6. When we will enter the details for the device section the certificate will be downloaded,
    There is not certificate download for the person section.
